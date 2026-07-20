@@ -9,7 +9,7 @@ public class experiment1{
 
     public static void main(String[] args) {
 
-        // (b) Snack price and running total
+        
         int snackPrice = 15;
         int total = 0;
 

@@ -1,6 +1,9 @@
-package lab02.Q1;
 
-public class Thermostat {
+
+import java.util.Scanner;
+
+public class Thermostat{
+   
     private String location;
     private int temperature;
     private static final int MIN = 16;
@@ -33,11 +36,13 @@ public class Thermostat {
     }
 
     
-    public void lower() {
+    public boolean lower() {
         if (this.temperature > MIN) {
             this.temperature--;
+            return true;
         } else {
             System.out.println("Already at minimum (" + MIN + ")");
+            return false;
         }
     }
 
@@ -54,19 +59,22 @@ public class Thermostat {
     
     public static void main(String[] args) {
         
-        Thermostat livingRoom = new Thermostat("Living Room", 20);
-        Thermostat bedRoom = new Thermostat("Bedroom", 25);
+        Thermostat thermostat1 = new Thermostat("Living Room", 20);
+        Thermostat thermostat2 = new Thermostat("Bedroom", 25);
 
         
         System.out.println("Testing Living Room: ");
         for (int i = 0; i < 10; i++) {
-            livingRoom.raise();
-            System.out.println("Current temp: " + livingRoom.getTemperature());
+            thermostat1.raise();
+            System.out.println("Current temp: " + thermostat1.getTemperature());
         }
 
         for (int i = 0; i < 20; i++) {
-            livingRoom.lower();
-            System.out.println("Current temp: " + livingRoom.getTemperature());
+            if(!thermostat1.lower()) {
+                break;
+            }
+            
+            System.out.println("Current temp: " + thermostat1.getTemperature());
         }
 
         
