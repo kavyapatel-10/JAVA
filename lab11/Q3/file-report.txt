@@ -1,0 +1,5 @@
+FILE REPORT
+Name | Size (bytes) | Modified time
+FolderReport$1.class | 2937 | 2026-10-28T13:30:21.222Z
+FolderReport.class | 2423 | 2026-10-28T13:30:21.233Z
+FolderReport.java | 2994 | 2026-10-28T13:30:13.373Z

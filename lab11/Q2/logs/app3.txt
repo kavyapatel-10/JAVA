@@ -1,0 +1,3 @@
+INFO Task completed
+ERROR Disk warning
+INFO Shutdown
